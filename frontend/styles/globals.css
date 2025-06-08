@@ -1,0 +1,215 @@
+:root {
+  --primary: #2563eb;
+  --primary2: #3b82f6;
+  --accent: #f59e42;
+  --danger: #e11d48;
+  --danger-dark: #991b1b;
+  --background: #f7faff;
+  --card-bg: #fff;
+  --radius: 16px;
+  --shadow: 0 8px 32px 0 rgba(30, 41, 59, 0.11);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--background);
+  color: #21243d;
+  min-height: 100vh;
+}
+
+.main-header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin: 2.2rem 0 0.5rem 0;
+  color: var(--primary);
+  text-shadow: 0 3px 24px #3b82f66b;
+}
+
+.main-sub {
+  text-align: center;
+  color: #374151;
+  font-weight: 600;
+  font-size: 1.13rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.07em;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem 2.4rem;
+  margin: 1.2rem 0 2.5rem 0;
+  box-shadow: var(--shadow);
+  border: 1.5px solid #e0e7ef;
+  transition: box-shadow 0.18s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 34px 0 rgba(30, 64, 175, 0.13);
+}
+
+.site-btn, .chakra-button.site-btn {
+  background: linear-gradient(97deg, #2850b9 0%, #2563eb 60%, #f59e42 110%);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  padding: 0.75em 2.15em;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-shadow: 0 2px 12px 0 rgba(30, 58, 138, 0.13);
+  transition:
+    background 0.18s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.15s cubic-bezier(.4,0,.2,1),
+    color 0.15s cubic-bezier(.4,0,.2,1),
+    transform 0.13s cubic-bezier(.4,0,.2,1);
+}
+
+.site-btn > *, .chakra-button.site-btn > * {
+  flex: 1 1 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.site-btn:hover, .chakra-button.site-btn:hover {
+  background: linear-gradient(97deg, #132e5b 0%, #1749b1 60%, #f59e42 110%);
+  color: #fff !important;
+  box-shadow: 0 6px 22px 0 #1e3a8a44;
+  transform: translateY(-2px) scale(1.04);
+}
+.site-btn:active, .chakra-button.site-btn:active {
+  background: linear-gradient(96deg, #10264d 0%, #2563eb 70%, #f59e42 100%);
+  color: #fff !important;
+}
+
+/* REMOVE BUTTON (DARK RED GRADIENT) */
+.btn-remove, .chakra-button.btn-remove {
+  background: linear-gradient(95deg, #991b1b 0%, #e11d48 60%, #f59e42 120%);
+  color: #fff !important;
+  font-weight: 800;
+  padding: 0.7em 1.7em;
+  border-radius: 12px;
+  border: none;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  transition:
+    background 0.15s cubic-bezier(.4,0,.2,1),
+    color 0.15s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.15s cubic-bezier(.4,0,.2,1),
+    transform 0.13s cubic-bezier(.4,0,.2,1);
+}
+.btn-remove > *, .chakra-button.btn-remove > * {
+  flex: 1 1 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.btn-remove:hover, .chakra-button.btn-remove:hover {
+  background: linear-gradient(93deg, #be123c 0%, #e11d48 73%, #fcd34d 120%);
+  color: #fff !important;
+  box-shadow: 0 8px 28px 0 #e11d485a;
+  transform: translateY(-1.5px) scale(1.035);
+}
+.btn-remove:active, .chakra-button.btn-remove:active {
+  background: linear-gradient(96deg, #7f1d1d 0%, #be185d 70%, #fcd34d 100%);
+  color: #fff !important;
+}
+
+input, select, .chakra-input, .chakra-select {
+  background: #f8fafc;
+  border: 1.5px solid #e0e7ef;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  font-size: 1rem;
+  color: #21243d;
+  transition: border-color 0.14s cubic-bezier(.4,0,.2,1), box-shadow 0.14s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  margin-bottom: 0.7em;
+}
+
+select, .chakra-select {
+  text-align: center !important;
+  text-align-last: center !important;
+  -moz-text-align-last: center !important;
+  -webkit-text-align-last: center !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  line-height: 1.2 !important;
+  /* The following helps for Chakra, Chrome, and Firefox */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+input:focus, select:focus, .chakra-input:focus, .chakra-select:focus {
+  border-color: var(--primary2);
+  box-shadow: 0 0 0 1.5px var(--primary2);
+}
+
+label, .chakra-form__label {
+  color: var(--primary);
+  font-weight: 700 !important;
+  margin-bottom: 0.45em;
+  font-size: 1.07em;
+}
+
+.table-colorful {
+  width: 100%;
+  border-radius: 15px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f8fafc;
+  box-shadow: 0 2px 12px #dbeafe44;
+  font-size: 1.06em;
+  overflow: hidden;
+}
+.table-colorful th, .table-colorful td {
+  padding: 0.85em 1.17em;
+  text-align: left;
+}
+.table-colorful th {
+  background: #e0e7ff;
+  color: var(--primary);
+  font-weight: 900;
+  border-bottom: 2.5px solid var(--primary);
+  letter-spacing: 0.01em;
+}
+.table-colorful td {
+  background: #f8fafc;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.12s;
+}
+.table-colorful tr:last-child td {
+  border-bottom: none;
+}
+.table-colorful tr:hover td {
+  background: #dbeafe;
+}
+.recharts-wrapper {
+  font-family: inherit !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #dbeafe;
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  .card { padding: 1.3rem 0.8rem; }
+  .main-header { font-size: 2rem; }
+  .main-sub { font-size: 1rem; }
+  .table-colorful th, .table-colorful td { padding: 0.6em 0.5em; }
+}
